@@ -1,0 +1,60 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(120deg, #ff7eb3, #ff758c);
+    overflow: hidden;
+    font-family: 'Arial', sans-serif;
+}
+
+.container {
+    text-align: center;
+    color: white;
+}
+
+.typing {
+    font-size: 2.5em;
+    border-right: 2px solid white;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 28ch;
+    animation: typing 3s steps(18), blink .5s step-end infinite;
+}
+
+
+.subtext {
+    font-size: 1.2em;
+    margin-top: 20px;
+    animation: fadeIn 5s ease-in-out 1s forwards;
+    opacity: 0;
+}
+
+/* Typing animation */
+@keyframes typing {
+    from { width: 0; }
+    to { width: 38ch; }
+}
+
+@keyframes blink {
+    150% { border-color: transparent; }
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Confetti animation */
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
